@@ -1,7 +1,7 @@
-package com.checkmarx.teamcity.server;
+package com.checkmarx.teamcitytest.server;
 
-import com.checkmarx.teamcity.common.CheckmarxParams;
-import com.checkmarx.teamcity.common.PluginUtils;
+import com.checkmarx.teamcitytest.common.CheckmarxParams;
+import com.checkmarx.teamcitytest.common.PluginUtils;
 import jetbrains.buildServer.controllers.ActionErrors;
 import jetbrains.buildServer.controllers.BaseFormXmlController;
 import jetbrains.buildServer.log.Loggers;

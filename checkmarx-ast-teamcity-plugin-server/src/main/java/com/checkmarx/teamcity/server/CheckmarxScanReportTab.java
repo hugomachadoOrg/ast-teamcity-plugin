@@ -1,6 +1,6 @@
-package com.checkmarx.teamcity.server;
+package com.checkmarx.teamcitytest.server;
 
-import com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants;
+import com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants;
 import jetbrains.buildServer.serverSide.SBuild;
 import jetbrains.buildServer.serverSide.SBuildServer;
 import jetbrains.buildServer.serverSide.SBuildType;

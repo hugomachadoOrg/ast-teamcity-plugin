@@ -1,6 +1,6 @@
-package com.checkmarx.teamcity.server;
+package com.checkmarx.teamcitytest.server;
 
-import com.checkmarx.teamcity.common.CheckmarxParams;
+import com.checkmarx.teamcitytest.common.CheckmarxParams;
 import jetbrains.buildServer.serverSide.ServerPaths;
 import jetbrains.buildServer.util.PropertiesUtil;
 import org.apache.log4j.Logger;
