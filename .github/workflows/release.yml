@@ -23,7 +23,7 @@ on:
         type: string
 jobs:
   deleteDevReleases:
-    uses: Checkmarx/ast-teamcity-plugin/.github/workflows/delete-dev-releases.yml@main
+    uses: hugomachadoOrg/ast-teamcity-plugin/.github/workflows/delete-dev-releases.yml@main
     with:
       tag: ${{ inputs.rchannels }}
     secrets: inherit
