@@ -1,11 +1,11 @@
-package com.checkmarx.teamcity.agent.commands;
+package com.checkmarx.teamcitytest.agent.commands;
 
-import com.checkmarx.teamcity.common.CheckmarxScanConfig;
-import com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants;
-import com.checkmarx.teamcity.common.PluginUtils;
-import com.checkmarx.teamcity.common.runner.Platform;
-import com.checkmarx.teamcity.common.runner.RunnerVersion;
-import com.checkmarx.teamcity.common.runner.Runners;
+import com.checkmarx.teamcitytest.common.CheckmarxScanConfig;
+import com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants;
+import com.checkmarx.teamcitytest.common.PluginUtils;
+import com.checkmarx.teamcitytest.common.runner.Platform;
+import com.checkmarx.teamcitytest.common.runner.RunnerVersion;
+import com.checkmarx.teamcitytest.common.runner.Runners;
 
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.TeamCityRuntimeException;
@@ -46,7 +46,7 @@ public abstract class CheckmarxBuildServiceAdapter extends BuildServiceAdapter {
 
         String agentToolsDirectory = getAgentConfiguration().getAgentToolsDirectory().getAbsolutePath();
         Platform platform = detectAgentPlatform();
-        Path checkmarxCLIToolPath = Paths.get(agentToolsDirectory, "checkmarx-ast-teamcity-plugin-runner", "bin", version, runner.getCheckmarxCliToolPath(platform));
+        Path checkmarxCLIToolPath = Paths.get(agentToolsDirectory, "checkmarx-ast-teamcitytest-plugin-runner", "bin", version, runner.getCheckmarxCliToolPath(platform));
         if (!checkmarxCLIToolPath.toFile().exists()) {
             throw new TeamCityRuntimeException(format("Could not found '%s'", checkmarxCLIToolPath.toString()));
         }

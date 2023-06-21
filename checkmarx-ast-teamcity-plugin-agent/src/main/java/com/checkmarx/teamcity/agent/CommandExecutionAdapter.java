@@ -1,10 +1,10 @@
-package com.checkmarx.teamcity.agent;
+package com.checkmarx.teamcitytest.agent;
 
-import com.checkmarx.teamcity.agent.commands.CheckmarxBuildServiceAdapter;
-import com.checkmarx.teamcity.common.CheckmarxScanCancelCommandExecutor;
-import com.checkmarx.teamcity.common.CheckmarxScanConfig;
-import com.checkmarx.teamcity.common.CheckmarxScanParamRetriever;
-import com.checkmarx.teamcity.common.PluginUtils;
+import com.checkmarx.teamcitytest.agent.commands.CheckmarxBuildServiceAdapter;
+import com.checkmarx.teamcitytest.common.CheckmarxScanCancelCommandExecutor;
+import com.checkmarx.teamcitytest.common.CheckmarxScanConfig;
+import com.checkmarx.teamcitytest.common.CheckmarxScanParamRetriever;
+import com.checkmarx.teamcitytest.common.PluginUtils;
 
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.TeamCityRuntimeException;

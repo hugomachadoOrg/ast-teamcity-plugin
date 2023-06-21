@@ -1,6 +1,6 @@
-package com.checkmarx.teamcity.server;
+package com.checkmarx.teamcitytest.server;
 
-import com.checkmarx.teamcity.common.CheckmarxParams;
+import com.checkmarx.teamcitytest.common.CheckmarxParams;
 import jetbrains.buildServer.serverSide.BuildStartContext;
 import jetbrains.buildServer.serverSide.BuildStartContextProcessor;
 import jetbrains.buildServer.web.openapi.PluginDescriptor;

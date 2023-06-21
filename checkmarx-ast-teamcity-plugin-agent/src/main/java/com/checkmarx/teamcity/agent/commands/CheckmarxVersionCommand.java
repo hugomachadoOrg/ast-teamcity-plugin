@@ -1,4 +1,4 @@
-package com.checkmarx.teamcity.agent.commands;
+package com.checkmarx.teamcitytest.agent.commands;
 
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.agent.runner.ProgramCommandLine;

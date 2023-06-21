@@ -1,4 +1,4 @@
-package com.checkmarx.teamcity.common;
+package com.checkmarx.teamcitytest.common;
 
 public abstract class CheckmarxParams {
 

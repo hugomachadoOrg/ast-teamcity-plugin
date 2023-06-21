@@ -1,4 +1,4 @@
-package com.checkmarx.teamcity.common.runner;
+package com.checkmarx.teamcitytest.common.runner;
 
 
 import java.util.Set;
