@@ -1,11 +1,11 @@
-package com.checkmarx.teamcitytest.common.runner;
+package com.checkmarx.teamcity.common.runner;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
 
 import static java.util.Arrays.asList;
-import static com.checkmarx.teamcitytest.common.runner.Platform.*;
+import static com.checkmarx.teamcity.common.runner.Platform.*;
 
 public final class Runners {
 

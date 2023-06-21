@@ -1,4 +1,4 @@
-package com.checkmarx.teamcitytest.common;
+package com.checkmarx.teamcity.common;
 
 import jetbrains.buildServer.serverSide.crypt.EncryptUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.checkmarx.teamcitytest.common.CheckmarxParams.*;
+import static com.checkmarx.teamcity.common.CheckmarxParams.*;
 import static jetbrains.buildServer.util.StringUtil.nullIfEmpty;
 
 public class PluginUtils {

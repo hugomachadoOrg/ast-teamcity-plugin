@@ -1,8 +1,8 @@
-package com.checkmarx.teamcitytest.agent;
+package com.checkmarx.teamcity.agent;
 
-import com.checkmarx.teamcitytest.agent.commands.*;
-import com.checkmarx.teamcitytest.common.CheckmarxParams;
-import com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants;
+import com.checkmarx.teamcity.agent.commands.*;
+import com.checkmarx.teamcity.common.CheckmarxParams;
+import com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants;
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.TeamCityRuntimeException;
 import jetbrains.buildServer.agent.BuildFinishedStatus;

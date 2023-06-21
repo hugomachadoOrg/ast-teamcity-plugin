@@ -3,9 +3,9 @@
 <%@ taglib prefix="props" tagdir="/WEB-INF/tags/props" %>
 <%@ taglib prefix="bs" tagdir="/WEB-INF/tags" %>
 <jsp:useBean id="propertiesBean" scope="request" type="jetbrains.buildServer.controllers.BasePropertiesBean"/>
-<jsp:useBean id="constants" class="com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants"/>
-<jsp:useBean id="runners" class="com.checkmarx.teamcitytest.common.runner.Runners"/>
-<jsp:useBean id="optionsBean" class="com.checkmarx.teamcitytest.server.CheckmarxOptions"/>
+<jsp:useBean id="constants" class="com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants"/>
+<jsp:useBean id="runners" class="com.checkmarx.teamcity.common.runner.Runners"/>
+<jsp:useBean id="optionsBean" class="com.checkmarx.teamcity.server.CheckmarxOptions"/>
 
 
 <c:if test="${propertiesBean.properties[optionsBean.useDefaultServer] == 'true'}">

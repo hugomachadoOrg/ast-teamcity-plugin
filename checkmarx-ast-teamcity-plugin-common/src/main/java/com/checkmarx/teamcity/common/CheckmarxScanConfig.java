@@ -1,4 +1,4 @@
-package com.checkmarx.teamcitytest.common;
+package com.checkmarx.teamcity.common;
 
 import org.apache.commons.lang3.StringUtils;
 

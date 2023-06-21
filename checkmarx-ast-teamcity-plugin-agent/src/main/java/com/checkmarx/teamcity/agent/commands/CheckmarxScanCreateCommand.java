@@ -1,8 +1,8 @@
-package com.checkmarx.teamcitytest.agent.commands;
+package com.checkmarx.teamcity.agent.commands;
 
 
-import com.checkmarx.teamcitytest.common.CheckmarxScanConfig;
-import com.checkmarx.teamcitytest.common.PluginUtils;
+import com.checkmarx.teamcity.common.CheckmarxScanConfig;
+import com.checkmarx.teamcity.common.PluginUtils;
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.agent.runner.ProgramCommandLine;
 import jetbrains.buildServer.agent.runner.SimpleProgramCommandLine;

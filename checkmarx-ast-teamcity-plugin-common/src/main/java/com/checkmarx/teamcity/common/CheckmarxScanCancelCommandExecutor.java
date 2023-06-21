@@ -1,4 +1,4 @@
-package com.checkmarx.teamcitytest.common;
+package com.checkmarx.teamcity.common;
 
 import jetbrains.buildServer.TeamCityRuntimeException;
 import jetbrains.buildServer.agent.BuildProgressLogger;

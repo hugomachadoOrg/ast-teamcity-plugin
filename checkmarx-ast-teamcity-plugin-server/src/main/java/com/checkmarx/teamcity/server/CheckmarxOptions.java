@@ -1,10 +1,10 @@
-package com.checkmarx.teamcitytest.server;
+package com.checkmarx.teamcity.server;
 
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.checkmarx.teamcitytest.common.CheckmarxParams.*;
+import static com.checkmarx.teamcity.common.CheckmarxParams.*;
 
 
 public class CheckmarxOptions {

@@ -1,7 +1,7 @@
-package com.checkmarx.teamcitytest.server;
+package com.checkmarx.teamcity.server;
 
-import com.checkmarx.teamcitytest.common.CheckmarxParams;
-import com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants;
+import com.checkmarx.teamcity.common.CheckmarxParams;
+import com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants;
 import jetbrains.buildServer.controllers.admin.AdminPage;
 import jetbrains.buildServer.serverSide.auth.Permission;
 import jetbrains.buildServer.serverSide.crypt.RSACipher;

@@ -1,4 +1,4 @@
-package com.checkmarx.teamcitytest.common;
+package com.checkmarx.teamcity.common;
 
 public class CheckmarxScanRunnerConstants {
 

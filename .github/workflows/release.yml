@@ -78,16 +78,16 @@ jobs:
         with:
           release_name: Checkmarx Azure ${{ env.RELEASE_VERSION }}
           tag_name: ${{ env.RELEASE_VERSION }}
-          files: ./build/target/checkmarx-ast-teamcitytest-plugin.zip
+          files: ./build/target/checkmarx-ast-teamcity-plugin.zip
           generate_release_notes: true
           prerelease: ${{ inputs.rchannels != '' && inputs.rchannels != null }}
 
       - name: Release to marketplace
         run: |
           if [ -z "${{ inputs.rchannels }}" ]; then
-            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcitytest-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
+            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcity-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
           else
-            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F channel=${{ inputs.rchannels }} -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcitytest-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
+            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F channel=${{ inputs.rchannels }} -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcity-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
           fi
       - name: Get latest release notes
         id: release

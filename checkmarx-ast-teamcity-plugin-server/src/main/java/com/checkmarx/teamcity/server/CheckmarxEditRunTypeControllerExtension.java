@@ -1,8 +1,8 @@
-package com.checkmarx.teamcitytest.server;
+package com.checkmarx.teamcity.server;
 
-import com.checkmarx.teamcitytest.common.CheckmarxParams;
-import com.checkmarx.teamcitytest.common.CheckmarxScanRunnerConstants;
-import com.checkmarx.teamcitytest.common.PluginUtils;
+import com.checkmarx.teamcity.common.CheckmarxParams;
+import com.checkmarx.teamcity.common.CheckmarxScanRunnerConstants;
+import com.checkmarx.teamcity.common.PluginUtils;
 import jetbrains.buildServer.controllers.ActionErrors;
 import jetbrains.buildServer.controllers.BasePropertiesBean;
 import jetbrains.buildServer.controllers.StatefulObject;
