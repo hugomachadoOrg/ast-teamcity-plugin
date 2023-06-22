@@ -46,7 +46,7 @@ public abstract class CheckmarxBuildServiceAdapter extends BuildServiceAdapter {
 
         String agentToolsDirectory = getAgentConfiguration().getAgentToolsDirectory().getAbsolutePath();
         Platform platform = detectAgentPlatform();
-        Path checkmarxCLIToolPath = Paths.get(agentToolsDirectory, "checkmarx-ast-teamcitytest-plugin-runner", "bin", version, runner.getCheckmarxCliToolPath(platform));
+        Path checkmarxCLIToolPath = Paths.get(agentToolsDirectory, "checkmarx-ast-teamcity-plugin-runner", "bin", version, runner.getCheckmarxCliToolPath(platform));
         if (!checkmarxCLIToolPath.toFile().exists()) {
             throw new TeamCityRuntimeException(format("Could not found '%s'", checkmarxCLIToolPath.toString()));
         }
