@@ -7,21 +7,21 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>../checkmarx-ast-teamcity-plugin-agent/target/checkmarx-ast-teamcity-plugin-agent.zip</source>
+            <source>../checkmarx-ast-teamcitytest-plugin-agent/target/checkmarx-ast-teamcitytest-plugin-agent.zip</source>
             <outputDirectory>agent</outputDirectory>
         </file>
         <file>
-            <source>../checkmarx-ast-teamcity-plugin-agent/target/checkmarx-ast-teamcity-plugin-runner.zip</source>
+            <source>../checkmarx-ast-teamcitytest-plugin-agent/target/checkmarx-ast-teamcitytest-plugin-runner.zip</source>
             <outputDirectory>agent</outputDirectory>
         </file>
         <file>
-            <source>../checkmarx-ast-teamcity-plugin-server/target/checkmarx-ast-teamcity-plugin-server/teamcity-plugin.xml</source>
+            <source>../checkmarx-ast-teamcitytest-plugin-server/target/checkmarx-ast-teamcitytest-plugin-server/teamcity-plugin.xml</source>
             <outputDirectory>${file.separator}</outputDirectory>
         </file>
     </files>
     <fileSets>
         <fileSet>
-            <directory>../checkmarx-ast-teamcity-plugin-server/target/checkmarx-ast-teamcity-plugin-server/server</directory>
+            <directory>../checkmarx-ast-teamcitytest-plugin-server/target/checkmarx-ast-teamcitytest-plugin-server/server</directory>
             <outputDirectory>server</outputDirectory>
         </fileSet>
     </fileSets>
