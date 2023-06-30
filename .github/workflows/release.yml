@@ -7,7 +7,7 @@ on:
         description: 'Next release tag'
         required: true
         type: string
-      rchannels:
+      rbranch:
         description: 'Channels to publish development releases'
         required: false
         type: string
@@ -17,7 +17,7 @@ on:
         description: 'Next release tag'
         required: true
         type: string
-      rchannels:
+      rbranch:
         description: 'Channels to publish development releases'
         required: false
         type: string
@@ -25,9 +25,9 @@ jobs:
   deleteDevReleases:
     uses: hugomachadoOrg/ast-teamcity-plugin/.github/workflows/delete-dev-releases.yml@main
     with:
-      tag: ${{ inputs.rchannels }}
+      tag: ${{ inputs.rbranch }}
     secrets: inherit
-    if: inputs.rchannels
+    if: inputs.rbranch
   release:
     runs-on: ubuntu-latest
 
@@ -83,14 +83,14 @@ jobs:
           tag_name: ${{ env.GH_RELEASE_TAG_NAME }}
           files: ./build/target/checkmarx-ast-teamcitytest-plugin.zip
           generate_release_notes: true
-          prerelease: ${{ inputs.rchannels != '' && inputs.rchannels != null }}
+          prerelease: ${{ inputs.rbranch != '' && inputs.rbranch != null }}
 
       - name: Release to marketplace
         run: |
-          if [ -z "${{ inputs.rchannels }}" ]; then
+          if [ -z "${{ inputs.rbranch }}" ]; then
             curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcitytest-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
           else
-            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F channel=${{ inputs.rchannels }} -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcitytest-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
+            curl -i --header "Authorization: Bearer ${{ secrets.JETBRAINS_USER }}" -F channel=${{ inputs.rbranch }} -F pluginId=${{ secrets.JETBRAINS_PLUGIN_ID }} -F file=@./build/target/checkmarx-ast-teamcitytest-plugin.zip https://plugins.jetbrains.com/plugin/uploadPlugin
           fi
       - name: Get latest release notes
         id: release
@@ -119,4 +119,4 @@ jobs:
         with:
           teams_webhook_url: ${{ secrets.TEAMS_WEBHOOK_URI }}
           message: "<h1>Checkmarx TeamCity Plugin ${{ env.RELEASE_VERSION }}</h1>${{ steps.clean.outputs.clean }}"
-          if: ${{ inputs.rchannels == '' || inputs.rchannels == null }}
+          if: ${{ inputs.rbranch == '' || inputs.rbranch == null }}
