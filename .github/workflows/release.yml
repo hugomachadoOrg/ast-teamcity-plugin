@@ -41,12 +41,15 @@ jobs:
       - name: Create Release Name
         run: |
           echo "Creating release name"
-          if [ -z "${{ inputs.rchannels }}" ]; then
-            echo "GH_RELEASE_TAG_NAME=${{ env.RELEASE_VERSION }}" >> $GITHUB_ENV
+          if [ -z "${{ inputs.rbranch }}" ]; then
+             echo "GH_RELEASE_TAG_NAME=${{ env.RELEASE_VERSION }}" >> $GITHUB_ENV
+             echo "GH_BRANCH_NAME=main" >> $GITHUB_ENV
           else
-            echo "GH_RELEASE_TAG_NAME=${{ env.RELEASE_VERSION }}-${{ inputs.rchannels }}" >> $GITHUB_ENV
+             echo "GH_RELEASE_TAG_NAME=${{ env.RELEASE_VERSION }}-${{ inputs.rbranch }}" >> $GITHUB_ENV
+             echo "GH_BRANCH_NAME=nightly" >> $GITHUB_ENV
           fi
-           echo "Release name - ${{ env.GH_RELEASE_TAG_NAME }}"
+          echo "Release name - ${{ env.GH_RELEASE_TAG_NAME }}"
+          echo "Branch name - ${{ env.GH_BRANCH_NAME }}"
       - name: Cache local Maven repository
         uses: actions/cache@v3.3.1
         with:
@@ -116,4 +119,4 @@ jobs:
         with:
           teams_webhook_url: ${{ secrets.TEAMS_WEBHOOK_URI }}
           message: "<h1>Checkmarx TeamCity Plugin ${{ env.RELEASE_VERSION }}</h1>${{ steps.clean.outputs.clean }}"
-        if: ${{ inputs.rchannels == '' || inputs.rchannels == null }}
+          if: ${{ inputs.rchannels == '' || inputs.rchannels == null }}
