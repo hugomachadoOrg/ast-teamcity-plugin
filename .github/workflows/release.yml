@@ -50,6 +50,8 @@ jobs:
           fi
           echo "Release name - ${{ env.GH_RELEASE_TAG_NAME }}"
           echo "Branch name - ${{ env.GH_BRANCH_NAME }}"
+      - name: Print Branch Name
+        run: echo "Branch name - ${{ env.GH_BRANCH_NAME }}"
       - name: Cache local Maven repository
         uses: actions/cache@v3.3.1
         with:
